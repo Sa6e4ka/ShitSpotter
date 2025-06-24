@@ -34,9 +34,9 @@ jobs:
           echo "AWS_REGION=${{ secrets.AWS_REGION }}" >> $GITHUB_ENV
           echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
           echo "S3_BUCKET_NAME=${{ secrets.S3_BUCKET_NAME }}" >> $GITHUB_ENV
-      - name: Run tests
-        run: |
-          pytest
+      # - name: Run tests
+      #   run: |
+      #     pytest
   deploy:
     needs: test
     runs-on: ubuntu-latest

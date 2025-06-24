@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from main import app  # Ваш FastAPI app
+from main import app
 import subprocess
 from utils import delete_file_from_s3
 
