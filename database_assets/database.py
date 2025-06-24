@@ -6,15 +6,15 @@ from sqlalchemy.ext.declarative import declarative_base
 
 load_dotenv()
 
-USER = os.getenv("user")
-PASSWORD = os.getenv("password")
-HOST = os.getenv("host")
-PORT = os.getenv("db_port")
-DBNAME = os.getenv("dbname")
+USER = os.getenv("USER")
+PASSWORD = os.getenv("PASSWORD")
+HOST = os.getenv("HOST")
+# PORT = os.getenv("db_port")
+DBNAME = os.getenv("DBNAME")
 
 # Construct the SQLAlchemy connection string
 DATABASE_URL = (
-    f"postgresql+psycopg2://{USER}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}?sslmode=require"
+    f"postgresql+psycopg2://{USER}:{PASSWORD}@{HOST}:6543/{DBNAME}?sslmode=require"
 )
 
 # Create the SQLAlchemy engine
